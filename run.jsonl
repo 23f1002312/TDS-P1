@@ -1,0 +1,26 @@
+{"type": "incoming", "chat_id": 8102778459, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1784975599.5661118}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": 30, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/refs/heads/main/run.jsonl\"}", "timestamp": 1784975606.7115784}
+{"type": "incoming", "chat_id": 8102778459, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1785174871.7218084}
+{"type": "error", "chat_id": 8102778459, "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}", "timestamp": 1785174875.603198}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": null, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785174875.6036181}
+{"type": "incoming", "chat_id": 8102778459, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1785174917.115066}
+{"type": "error", "chat_id": 8102778459, "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}", "timestamp": 1785174919.5975575}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": null, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785174919.597961}
+{"type": "incoming", "chat_id": 8102778459, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1785177918.1752975}
+{"type": "error", "chat_id": 8102778459, "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}", "timestamp": 1785177921.2003934}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": null, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785177921.2066076}
+{"type": "incoming", "chat_id": 8102778459, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1785276600.6489692}
+{"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "openai/gpt-oss-20b:free", "timestamp": 1785276618.5567043}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": 30, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785276618.5570903}
+{"type": "incoming", "chat_id": 8102778459, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1785277598.44585}
+{"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "openai/gpt-oss-20b:free", "timestamp": 1785277606.2590847}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": 30, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785277606.2592485}
+{"type": "incoming", "chat_id": 8102778459, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1785278068.3657732}
+{"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "openai/gpt-oss-20b:free", "timestamp": 1785278084.3061578}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": 30, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785278084.3064747}
+{"type": "incoming", "chat_id": 8102778459, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1785290393.3174531}
+{"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "openai/gpt-oss-20b:free", "timestamp": 1785290414.7498527}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": 30, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785290414.7502599}
+{"type": "incoming", "chat_id": 8102778459, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\\\"state\\\": \\\"<state name>\\\"}", "timestamp": 1785290497.5737476}
+{"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "openai/gpt-oss-20b:free", "timestamp": 1785290544.1302137}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"state\": \"Nagaland\", \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785290544.1306646}
