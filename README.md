@@ -97,17 +97,20 @@ Make sure the repo is **Public** — private repos fail the registration check.
 thread so a slow or failed push never delays your reply to Telegram, and a
 push error gets logged instead of crashing the bot.
 
-For this to work, **wherever you host the bot needs git configured to push
-without an interactive prompt**:
-```bash
-git config user.email "you@example.com"
-git config user.name "Your Name"
-# Use a token in the remote URL so push doesn't need a password prompt:
-git remote set-url origin https://YOUR_GITHUB_TOKEN@github.com/YOUR_USERNAME/YOUR_REPO.git
-```
-Create the token at github.com → Settings → Developer settings → Personal
-access tokens (repo scope is enough). Do this once, on the actual host running
-`bot.py` (Render/Railway/VPS) — not just on your laptop.
+For this to work, **wherever you host the bot needs push credentials**. As of
+this update, `bot.py` handles this automatically at startup — just add two
+more environment variables on your host (Render/Railway/etc.), alongside the
+LLM keys:
+
+- `GITHUB_TOKEN` — a personal access token (`repo` scope). Create one at
+  github.com → Settings → Developer settings → Personal access tokens.
+- `GITHUB_REPO` — `23f1002312/TDS-P1` (just `owner/repo`, no URL).
+
+On startup, `bot.py` points its git remote at a token-authenticated URL and
+sets a commit identity automatically — no manual `git config`/`git remote`
+commands needed on the host. This only runs when both variables are present,
+so it's a no-op on your laptop where you haven't set them (git there is
+already configured however you set it up manually).
 
 If you'd rather not push from the deployed process at all, the manual/periodic
 approach from before still works fine — just run

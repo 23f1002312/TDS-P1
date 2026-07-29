@@ -181,7 +181,37 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await maybe_push_log()
 
 
+def _configure_git():
+    """Called once at startup so a freshly-deployed host (Render/Railway/etc.)
+    can push run.jsonl with zero manual git setup. Reads GITHUB_TOKEN and
+    GITHUB_REPO (e.g. "23f1002312/TDS-P1") from env vars and points the git
+    remote at a token-authenticated URL. No-op if either is missing — e.g. on
+    your laptop, where you've already configured git credentials by hand."""
+    github_token = os.environ.get("GITHUB_TOKEN", "")
+    github_repo = os.environ.get("GITHUB_REPO", "")
+    if not github_token or not github_repo:
+        print("[git] GITHUB_TOKEN/GITHUB_REPO not set — skipping auto-config, "
+              "assuming git is already set up on this host.")
+        return
+    remote_url = f"https://{github_token}@github.com/{github_repo}.git"
+    try:
+        # Works whether this host has an existing repo (Render clones one) or not.
+        if subprocess.run(["git", "rev-parse", "--is-inside-work-tree"], capture_output=True).returncode != 0:
+            subprocess.run(["git", "init"], check=True, capture_output=True)
+        result = subprocess.run(["git", "remote", "set-url", "origin", remote_url], capture_output=True)
+        if result.returncode != 0:
+            subprocess.run(["git", "remote", "add", "origin", remote_url], check=True, capture_output=True)
+        subprocess.run(["git", "config", "user.email", os.environ.get("GIT_USER_EMAIL", "bot@example.com")],
+                        capture_output=True)
+        subprocess.run(["git", "config", "user.name", os.environ.get("GIT_USER_NAME", "Data Analyst Bot")],
+                        capture_output=True)
+        print(f"[git] configured to push run.jsonl to {github_repo}")
+    except subprocess.CalledProcessError as e:
+        print(f"[git] auto-configuration failed (log pushing may not work): {e}")
+
+
 def main():
+    _configure_git()
     app = ApplicationBuilder().token(TELEGRAM_BOT_TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     print("Bot is running... (Ctrl+C to stop)")
