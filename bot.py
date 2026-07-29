@@ -115,7 +115,7 @@ def _git_push_log_sync():
                 print(f"[git] 'git commit' failed: {stderr}")
             return
 
-        push = subprocess.run(["git", "push"], capture_output=True)
+        push = subprocess.run(["git", "push", "origin", "HEAD:main"], capture_output=True)
         if push.returncode != 0:
             stderr = push.stderr.decode()
             print(f"[git] 'git push' FAILED: {stderr}")
@@ -233,4 +233,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
