@@ -99,20 +99,33 @@ def log_event(event: dict):
 
 def _git_push_log_sync():
     """Runs in a background thread — commits and pushes run.jsonl.
-    Never raises: git/network failures are logged, not fatal to the bot."""
+    Never raises: git/network failures are printed and logged, not fatal to the bot."""
     try:
-        subprocess.run(["git", "add", LOG_FILE], check=True, capture_output=True)
-        commit = subprocess.run(
-            ["git", "commit", "-m", "update run log"],
-            capture_output=True,
-        )
-        # A "nothing to commit" result is fine — just means no new lines since last push.
-        if commit.returncode == 0:
-            subprocess.run(["git", "push"], check=True, capture_output=True)
-    except subprocess.CalledProcessError as e:
-        stderr = e.stderr.decode() if e.stderr else str(e)
-        with open(LOG_FILE, "a") as f:
-            f.write(json.dumps({"type": "push_error", "error": stderr, "timestamp": time.time()}) + "\n")
+        add = subprocess.run(["git", "add", LOG_FILE], capture_output=True)
+        if add.returncode != 0:
+            print(f"[git] 'git add' failed: {add.stderr.decode()}")
+            return
+
+        commit = subprocess.run(["git", "commit", "-m", "update run log"], capture_output=True)
+        if commit.returncode != 0:
+            stderr = commit.stderr.decode()
+            if "nothing to commit" in commit.stdout.decode() or "nothing to commit" in stderr:
+                print(f"[git] nothing new to commit (event #{_event_count})")
+            else:
+                print(f"[git] 'git commit' failed: {stderr}")
+            return
+
+        push = subprocess.run(["git", "push"], capture_output=True)
+        if push.returncode != 0:
+            stderr = push.stderr.decode()
+            print(f"[git] 'git push' FAILED: {stderr}")
+            with open(LOG_FILE, "a") as f:
+                f.write(json.dumps({"type": "push_error", "error": stderr, "timestamp": time.time()}) + "\n")
+            return
+
+        print(f"[git] pushed {LOG_FILE} (event #{_event_count})")
+    except Exception as e:
+        print(f"[git] unexpected error during push: {e}")
 
 
 async def maybe_push_log():
@@ -220,3 +233,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
