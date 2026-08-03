@@ -72,3 +72,6 @@
 {"type": "incoming", "chat_id": 8102778459, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1785783462.5860398}
 {"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "openai/gpt-oss-20b:free", "timestamp": 1785783478.9054163}
 {"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": 30, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785783478.9055622}
+{"type": "incoming", "chat_id": 8102778459, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY this JSON object and nothing else: {\"answer\": {\"state\": \"<state name>\"}, \"log_url\": \"<public wget-able URL to your agent's JSONL log>\"}", "timestamp": 1785783498.7976174}
+{"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "openai/gpt-oss-20b:free", "timestamp": 1785783521.7266796}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": {\"state\": \"Uttar Pradesh\"}, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785783521.7268023}
