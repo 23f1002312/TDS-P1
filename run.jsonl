@@ -75,3 +75,6 @@
 {"type": "incoming", "chat_id": 8102778459, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY this JSON object and nothing else: {\"answer\": {\"state\": \"<state name>\"}, \"log_url\": \"<public wget-able URL to your agent's JSONL log>\"}", "timestamp": 1785783498.7976174}
 {"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "openai/gpt-oss-20b:free", "timestamp": 1785783521.7266796}
 {"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": {\"state\": \"Uttar Pradesh\"}, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785783521.7268023}
+{"type": "incoming", "chat_id": 8102778459, "text": "hello", "timestamp": 1785843384.2295854}
+{"type": "error", "chat_id": 8102778459, "error": "Expecting value: line 1 column 1 (char 0)", "timestamp": 1785843401.076965}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": null, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785843401.0770948}
