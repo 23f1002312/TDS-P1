@@ -84,3 +84,6 @@
 {"type": "incoming", "chat_id": 8102778459, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY this JSON object and nothing else: {\"answer\": {\"state\": \"<state name>\"}, \"log_url\": \"<public wget-able URL to your agent's JSONL log>\"}", "timestamp": 1785843439.9481947}
 {"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "openai/gpt-oss-20b:free", "timestamp": 1785843454.7339246}
 {"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": {\"state\": \"Uttar Pradesh\"}, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785843454.7340584}
+{"type": "incoming", "chat_id": 8102778459, "text": "why 6 is afraid of  7", "timestamp": 1785843472.9420595}
+{"type": "error", "chat_id": 8102778459, "error": "Expecting value: line 1 column 1 (char 0)", "timestamp": 1785843477.0574925}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": null, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1785843477.0576243}
