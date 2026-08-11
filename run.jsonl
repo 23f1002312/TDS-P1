@@ -108,3 +108,6 @@
 {"type": "incoming", "chat_id": 8102778459, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1786446373.959989}
 {"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "openai/gpt-oss-20b:free", "timestamp": 1786446387.3158088}
 {"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": 30, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1786446387.3159423}
+{"type": "incoming", "chat_id": 8102778459, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\\\"state\\\": \\\"<state name>\\\"}", "timestamp": 1786446389.76136}
+{"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "openai/gpt-oss-20b:free", "timestamp": 1786446430.4111567}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"state\": \"Uttar Pradesh\", \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1786446430.4112742}
