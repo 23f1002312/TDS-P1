@@ -111,3 +111,6 @@
 {"type": "incoming", "chat_id": 8102778459, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY a JSON object like {\\\"state\\\": \\\"<state name>\\\"}", "timestamp": 1786446389.76136}
 {"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "openai/gpt-oss-20b:free", "timestamp": 1786446430.4111567}
 {"type": "outgoing", "chat_id": 8102778459, "text": "{\"state\": \"Uttar Pradesh\", \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1786446430.4112742}
+{"type": "incoming", "chat_id": 8102778459, "text": "Which state has the highest maternal mortality rate based on MOSPI data? Reply with ONLY this JSON object and nothing else: {\"answer\": {\"state\": \"<state name>\"}, \"log_url\": \"<public wget-able URL to your agent's JSONL log>\"}", "timestamp": 1786446963.6308212}
+{"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "openai/gpt-oss-20b:free", "timestamp": 1786447195.8695304}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": {\"state\": \"Uttar Pradesh\"}, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1786447195.8696635}
