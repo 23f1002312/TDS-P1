@@ -186,6 +186,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     history.append({"role": "assistant", "content": json.dumps(parsed)})
 
+    if not isinstance(parsed, dict):
+        parsed = {"answer": parsed}
     parsed["log_url"] = LOG_URL
     final_reply = json.dumps(parsed)
 
