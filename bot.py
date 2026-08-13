@@ -61,7 +61,7 @@ _clients = {}
 
 def _get_client(provider):
     if provider["name"] not in _clients:
-        _clients[provider["name"]] = OpenAI(base_url=provider["base_url"], api_key=provider["api_key"], timeout=150.0)
+        _clients[provider["name"]] = OpenAI(base_url=provider["base_url"], api_key=provider["api_key"], timeout=200.0)
     return _clients[provider["name"]]
 
 
