@@ -40,6 +40,7 @@ PROVIDERS = [
         # OpenRouter's free lineup rotates — check https://openrouter.ai/models?max_price=0
         # before grading day and add/replace IDs here if this one has been retired.
         "models": [
+            "nvidia/nemotron-3-ultra-550b-a55b:free",
             "openai/gpt-oss-20b:free",
             "openrouter/free",
         ],
@@ -60,7 +61,7 @@ _clients = {}
 
 def _get_client(provider):
     if provider["name"] not in _clients:
-        _clients[provider["name"]] = OpenAI(base_url=provider["base_url"], api_key=provider["api_key"])
+        _clients[provider["name"]] = OpenAI(base_url=provider["base_url"], api_key=provider["api_key"], timeout=150.0)
     return _clients[provider["name"]]
 
 
