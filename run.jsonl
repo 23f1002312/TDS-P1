@@ -396,3 +396,6 @@
 {"type": "incoming", "chat_id": 8102778459, "text": "Test Hello 123", "timestamp": 1786875249.8338742}
 {"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "Claude-Opus-5", "timestamp": 1786875252.854405}
 {"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": \"Hello 123\", \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1786875252.854527}
+{"type": "incoming", "chat_id": 8102778459, "text": "What is 15% of 200? Reply with ONLY this JSON: {\"answer\": , \"log_url\": \"...\"}", "timestamp": 1786930509.145517}
+{"type": "llm_used", "chat_id": 8102778459, "provider": "openrouter", "model": "Claude-Opus-5", "timestamp": 1786930512.166457}
+{"type": "outgoing", "chat_id": 8102778459, "text": "{\"answer\": 30, \"log_url\": \"https://raw.githubusercontent.com/23f1002312/TDS-P1/main/run.jsonl\"}", "timestamp": 1786930512.166587}
