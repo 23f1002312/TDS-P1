@@ -40,7 +40,7 @@ PROVIDERS = [
         # OpenRouter's free lineup rotates — check https://openrouter.ai/models?max_price=0
         # before grading day and add/replace IDs here if this one has been retired.
         "models": [
-            "Claude-Opus-5",
+            "anthropic/claude-opus-5",
             "openai/gpt-5.6-sol",
             "nvidia/nemotron-3-ultra-550b-a55b:free",
             "openai/gpt-oss-20b:free",
